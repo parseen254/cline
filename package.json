@@ -185,7 +185,7 @@
 				"cline.enableTelemetry": {
 					"type": "boolean",
 					"default": false,
-					"description": "Enables extension to post anonymous usage data to help improve the product."
+					"description": "Enables extension to post anonymous error tracking & usage data to help improve the product."
 				}
 			}
 		}
