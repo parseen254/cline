@@ -41,6 +41,7 @@ export const ExtensionStateContextProvider: React.FC<{
 		platform: DEFAULT_PLATFORM,
 		vscMachineId: "",
 		advancedSettings: DEFAULT_ADVANCED_SETTINGS,
+		hideTelemetryOptIn: false,
 	})
 	const [didHydrateState, setDidHydrateState] = useState(false)
 	const [showWelcome, setShowWelcome] = useState(false)

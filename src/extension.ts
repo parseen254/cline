@@ -29,13 +29,6 @@ export function activate(context: vscode.ExtensionContext) {
 	Logger.initialize(outputChannel)
 	Logger.log("Cline extension activated")
 
-	// Nothing in the global state means the extension is installed for the first time
-	if (context.globalState.keys().length === 0) {
-		vscode.window.showInformationMessage("Welcome to Cline!")
-		const config = vscode.workspace.getConfiguration("cline")
-		config.update("enableTelemetry", true)
-	}
-
 	const sidebarProvider = new ClineProvider(context, outputChannel)
 
 	context.subscriptions.push(

@@ -74,6 +74,7 @@ export interface ExtensionState {
 	platform: Platform
 	advancedSettings: WorkspaceConfiguration | ClineConfiguration
 	vscMachineId: string
+	hideTelemetryOptIn: boolean
 	userInfo?: {
 		displayName: string | null
 		email: string | null

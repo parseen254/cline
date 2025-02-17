@@ -12,7 +12,8 @@ import McpView from "./components/mcp/McpView"
 import posthog from "posthog-js"
 
 const AppContent = () => {
-	const { didHydrateState, showWelcome, shouldShowAnnouncement, advancedSettings, vscMachineId } = useExtensionState()
+	const { didHydrateState, showWelcome, shouldShowAnnouncement, advancedSettings, vscMachineId, hideTelemetryOptIn } =
+		useExtensionState()
 	const [showSettings, setShowSettings] = useState(false)
 	const [showHistory, setShowHistory] = useState(false)
 	const [showMcp, setShowMcp] = useState(false)
@@ -66,7 +67,9 @@ const AppContent = () => {
 		if (telemetryEnabled) {
 			posthog.identify(vscMachineId)
 			posthog.opt_in_capturing()
-		} else posthog.opt_out_capturing()
+		} else {
+			posthog.opt_out_capturing()
+		}
 	}, [telemetryEnabled, vscMachineId])
 
 	useEffect(() => {
@@ -102,6 +105,7 @@ const AppContent = () => {
 						hideAnnouncement={() => {
 							setShowAnnouncement(false)
 						}}
+						hideTelemetryOptIn={hideTelemetryOptIn}
 					/>
 				</>
 			)}
