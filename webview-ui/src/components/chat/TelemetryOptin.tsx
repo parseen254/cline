@@ -67,7 +67,7 @@ const TelemetryOptin = () => {
 				information will be collected. You can change this setting anytime in{" "}
 				<VSCodeLink onClick={() => vscode.postMessage({ type: "openExtensionSettings" })}>VS Code preferences</VSCodeLink>
 				.{" "}
-				<VSCodeLink href="https://github.com/cline-app/cline/blob/main/PRIVACY.md" style={{ display: "inline" }}>
+				<VSCodeLink href="https://github.com/cline/cline/blob/main/docs/PRIVACY.md" style={{ display: "inline" }}>
 					Learn more
 				</VSCodeLink>
 			</p>
