@@ -108,7 +108,7 @@ export class ClineProvider implements vscode.WebviewViewProvider {
 	workspaceTracker?: WorkspaceTracker
 	mcpHub?: McpHub
 	private authManager: FirebaseAuthManager
-	private latestAnnouncementId = "feb-06-2025" // update to some unique identifier when we add a new announcement
+	private latestAnnouncementId = "jan-20-2025" // update to some unique identifier when we add a new announcement
 
 	constructor(
 		readonly context: vscode.ExtensionContext,
