@@ -9,6 +9,7 @@ class PostHogClient {
 	private constructor() {
 		this.client = new PostHog("phc_5WnLHpYyC30Bsb7VSJ6DzcPXZ34JSF08DJLyM7svZ15", {
 			host: "https://us.i.posthog.com",
+			enableExceptionAutocapture: true,
 		})
 	}
 
