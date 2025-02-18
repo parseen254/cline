@@ -1,5 +1,18 @@
 # Changelog
 
+## 3.4.1
+
+### Patch Changes
+
+-   cc166f4: Improve Requesty provider integration
+
+    -   Adding Cline headers to API requests, to enable targeted optimizations
+    -   Read o3 reasoning effort from Cline config, not model name
+    -   Show token information in task header
+    -   Get total cost from response when available
+
+-   b7519a3: Add MCP Marketplace
+
 ## [3.4.0]
 
 -   Send current textfield contents as additional feedback when toggling from Plan to Act Mode, or when hitting 'Approve' button
